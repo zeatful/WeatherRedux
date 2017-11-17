@@ -1,6 +1,7 @@
-# ReduxSimpleStarter
+# WeatherRedux
+View the application on heroku: [WebRedux](https://pacific-refuge-71809.herokuapp.com/)
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This application was build during this Udemy course: [Redux](https://www.udemy.com/react-redux/)?
 
 ### Getting Started
 
