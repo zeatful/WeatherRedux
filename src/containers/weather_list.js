@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Sparklines, SparklinesLine} from 'react-sparklines';
 
 /*
 TODO:
@@ -10,13 +11,21 @@ TODO:
 */
 class WeatherList extends Component {
   renderWeather(cityData) {
-    const name = cityData.name;
-    /* The json response from the api is not the same as
-    the course.  Instead oc cityData.city.name, it must be
-    cityData.name */
+    const name = cityData.city.name;
+    const temps = cityData
+      .list
+      .map(weather => weather.main.temp);
+
+    console.log(temps);
+
     return (
       <tr key={name}>
         <td>{name}</td>
+        <td>
+          <Sparklines height={120} width={180} data={temps}>
+            <SparklinesLine color="red"/>
+          </Sparklines>
+        </td>
       </tr>
     );
   }
