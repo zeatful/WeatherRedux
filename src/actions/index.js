@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-/* 
-  redux-promise is a middleware, hides the asynchronous code
+/*
+  redux-promise is a middleware that hides the asynchronous code
     - pauses the action if the payload is a promise
     - waits for the promise to resolve
     - returns the request instead of the promise by attaching it to a new instance of the
@@ -18,8 +18,5 @@ export function fetchWeather(city) {
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
-  return {
-    type: FETCH_WEATHER,
-    payload: request
-  };
+  return {type: FETCH_WEATHER, payload: request};
 }
