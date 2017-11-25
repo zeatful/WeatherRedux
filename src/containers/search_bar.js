@@ -5,7 +5,7 @@ import {fetchWeather} from '../actions/index';
 
 class SearchBar extends Component {
   constructor(props) {
-    this.super(props);
+    super(props);
 
     this.state = {
       term: ''
