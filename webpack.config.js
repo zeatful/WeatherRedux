@@ -4,6 +4,7 @@ module.exports = {
     path: __dirname,
     publicPath: '/',
     filename: 'bundle.js',
+    libraryTarget: 'umd',
     umdNamedDefine: true
   },
   module: {
