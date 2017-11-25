@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Chart from '../components/chart';
+import * as Chart from '../components/chart';
 import _ from 'lodash';
 import GoogleMap from '../components/google_map';
 
